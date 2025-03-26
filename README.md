@@ -20,8 +20,6 @@ This repository contains an advanced **ensemble machine learning model** for pre
 3. [Model Architecture](#model-architecture)
 4. [Results](#results)
 5. [Files](#files)
-6. [Repository Structure](#repository-structure)
-7. [Future Enhancements](#future-enhancements)
 
 ---
 
