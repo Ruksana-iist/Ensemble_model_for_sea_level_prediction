@@ -45,7 +45,8 @@ Sea level rise is a critical challenge in coastal management and climate researc
 ### **Installation**
 ```bash
 # Clone the repository
-git clone https://github.com/your-repo/sea-level-ensemble.git
+git clone https://github.com/Ruksana-iist
+Ensemble_model_for_sea_level_prediction.git
 cd sea-level-ensemble
 
 # Install dependencies
@@ -142,18 +143,6 @@ graph TD;
  ┗ 📜 README.md             # Documentation
 ```
 
----
-
-## **Future Enhancements**
-🚀 **Next Steps:**
-- Implement **deep learning models (CNN-LSTM)** for spatiotemporal analysis.
-- Explore **external climate indices (ENSO, IOD)** as additional features.
-- Develop a **real-time sea level prediction dashboard**.
-
-📧 **Contact:** If you're interested in collaboration, feel free to reach out! 🚀
-
----
 
 📝 **Note:** This repository uses a **demo dataset** due to confidentiality agreements with **INCOIS**. The original dataset cannot be shared publicly. However, the methodology and model can be reproduced using similar data sources.
 
-📢 **Star this repository ⭐ if you find it useful!**
