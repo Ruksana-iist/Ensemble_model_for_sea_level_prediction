@@ -102,35 +102,33 @@ The **stacked ensemble model** integrates predictions from **multiple base learn
         |  Final Prediction    |
         +----------------------+
 
-
+---
 
 ## **Results**
-📊 **Performance Metrics:**  
-- **Mean Absolute Error (MAE):** *TBD*  
-- **Root Mean Squared Error (RMSE):** *TBD*  
-- **R² Score:** *TBD*  
 
-🔍 **Feature Importance (SHAP Analysis):**  
-- `Feature_1` → **Most influential variable**  
-- `Feature_2` → **Moderate impact**  
-- `Feature_3` → **Least impact**  
+###📊 **Performance Metrics:**  
+![an example of West_coast_Tide gauge location](NewManglore_prediction_results.png)
+![an example of East_coast_Tide gauge location](Visakhapatnam_prediction_results.png)
+
+- **R² Score:** 0.8-0.9 on an avg for entire stations .
+
+### 🔍 **Feature Importance (SHAP Analysis)**  
+
+The SHAP summary plot provides insights into the most influential features contributing to sea level changes:  
+
+- **Upper Ocean Heat Content (`thetao_m3`)** has a strong positive impact on sea level rise. Higher heat content values correspond to higher SHAP values, indicating that increased ocean temperature significantly contributes to sea level changes.  
+- **Upper Ocean Salt Content (`so_m3`)** also plays a crucial role. Lower salinity values often correspond to rising sea levels, likely due to freshwater input from melting ice or precipitation-driven dilution.  
+- **Alongshore Ocean Currents (`V_eta`) and Cross-shore Ocean Currents (`V_xi`)** influence sea level variations by redistributing water masses across different regions.  
+- **Alongshore Ekman Transport (`M_eta`) and Cross-shore Ekman Transport (`M_xi`)** drive large-scale water movement, impacting coastal sea level fluctuations.  
+- **River Discharge (`dis24`)** affects local sea level anomalies, particularly in coastal zones, by altering freshwater input.  
+
+These findings highlight that **Upper Ocean Heat Content and Upper Ocean Salt Content** are the dominant drivers in our model, with ocean currents and external forcing mechanisms adding further variability.  
 
 📌 **Insights:**
 - Stacking improves prediction accuracy over single models.
 - SHAP analysis helps in identifying the most significant predictors.
 
 ---
-
-## **Files**
-📂 **Key Files:**
-- `train_model.py` → Train and save the ensemble model.
-- `model_utils.py` → Helper functions for training and evaluation.
-- `config.yaml` → Stores hyperparameter configurations.
-- `data/demo_sea_level.csv` → **Demo dataset** (Original INCOIS dataset is confidential).
-- `README.md` → This documentation.
-
----
-
 
 📝 **Note:** This repository uses a **demo dataset** due to confidentiality agreements with **INCOIS**. The original dataset cannot be shared publicly. However, the methodology and model can be reproduced using similar data sources.
 
