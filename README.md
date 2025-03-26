@@ -64,44 +64,21 @@ The **stacked ensemble model** integrates predictions from **multiple base learn
 6. **Prediction & Visualization:** Generates **sea level forecasts** and visualizes trends.  
 
 ---
-
+```markdown
 ## **Model Architecture**
-      +----------------+
-      |  Input Data    |
-      +----------------+
-              |
-              v
-      +----------------+
-      | Feature Eng.   |
-      +----------------+
-              |
-              v
- +-----------+-----------+
- |   Train Base Models   |
- +-----------+-----------+
-     |        |       |
-     v        v       v
-+-----------+ +--------+ +--------+
-| Random    | | XGBoost | | CatBoost |
-| Forest    | +--------+ +--------+
-+-----------+      |         |
-       \          |         /
-        \         |        /
-         \        |       /
-         +----------------+
-         | Ensemble Stacking |
-         +----------------+
-                 |
-                 v
-      +--------------------+
-      | Meta Learner (ElasticNet) |
-      +--------------------+
-                 |
-                 v
-        +----------------------+
-        |  Final Prediction    |
-        +----------------------+
 
+```mermaid
+graph TD;
+    A[Input Data] --> B[Feature Engineering];
+    B --> C[Train Base Models];
+    C --> D[Random Forest];
+    C --> E[XGBoost];
+    C --> F[CatBoost];
+    D --> G[Ensemble Stacking];
+    E --> G;
+    F --> G;
+    G --> H[Meta Learner (ElasticNet)];
+    H --> I[Final Prediction];
 ---
 
 ## **Results**
@@ -113,7 +90,7 @@ The **stacked ensemble model** integrates predictions from **multiple base learn
 - **R² Score:** 0.8-0.9 on an avg for entire stations .
 
 ### 🔍 **Feature Importance (SHAP Analysis)**  
-
+![SHAP_summary](SHAP_summary.png)
 The SHAP summary plot provides insights into the most influential features contributing to sea level changes:  
 
 - **Upper Ocean Heat Content (`thetao_m3`)** has a strong positive impact on sea level rise. Higher heat content values correspond to higher SHAP values, indicating that increased ocean temperature significantly contributes to sea level changes.  
