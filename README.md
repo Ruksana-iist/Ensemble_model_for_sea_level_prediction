@@ -45,8 +45,7 @@ Sea level rise is a critical challenge in coastal management and climate researc
 ### **Installation**
 ```bash
 # Clone the repository
-git clone https://github.com/Ruksana-iist
-Ensemble_model_for_sea_level_prediction.git
+git clone https://github.com/Ruksana-iist/Ensemble_model_for_sea_level_prediction.git
 cd sea-level-ensemble
 
 # Install dependencies
