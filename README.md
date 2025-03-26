@@ -88,7 +88,7 @@ The SHAP summary plot provides insights into the most influential features contr
 - **Alongshore Ekman Transport (`M_eta`) and Cross-shore Ekman Transport (`M_xi`)** drive large-scale water movement, impacting coastal sea level fluctuations.  
 - **River Discharge (`dis24`)** affects local sea level anomalies, particularly in coastal zones, by altering freshwater input.  
 
-These findings highlight that **Upper Ocean Heat Content and Upper Ocean Salt Content** are the dominant drivers in our model, with ocean currents and external forcing mechanisms adding further variability.  
+These findings highlight that **Upper Ocean Heat Content and Upper Ocean Salt Content** are the dominant drivers of sea level changes on Indian coastline, as per our model, with ocean currents and external forcing mechanisms adding further variability.  
 
 📌 **Insights:**
 - Stacking improves prediction accuracy over single models.
