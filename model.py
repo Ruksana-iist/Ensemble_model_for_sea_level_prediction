@@ -1,8 +1,9 @@
-#!/usr/bin/env python
-# coding: utf-8
+# SEA LEVEL PREDICTION
 
-# In[ ]:
+# DEVELOPED BY: 
+# RUKSANA SALIM
 
+# IMPORTING MODULES
 
 import numpy as np
 import pandas as pd
