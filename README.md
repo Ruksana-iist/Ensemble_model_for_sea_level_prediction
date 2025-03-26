@@ -64,7 +64,7 @@ The **stacked ensemble model** integrates predictions from **multiple base learn
 6. **Prediction & Visualization:** Generates **sea level forecasts** and visualizes trends.  
 
 ---
-```markdown
+
 ## **Model Architecture**
 
 ```mermaid
