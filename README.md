@@ -66,18 +66,43 @@ The **stacked ensemble model** integrates predictions from **multiple base learn
 ---
 
 ## **Model Architecture**
-```mermaid
-graph TD;
-    A[Input Data] -->|Feature Engineering| B[Train Base Models];
-    B --> C[Random Forest];
-    B --> D[XGBoost];
-    B --> E[CatBoost];
-    C --> F[Ensemble Stacking];
-    D --> F;
-    E --> F;
-    F --> G[Meta Learner (ElasticNet)];
-    G --> H[Final Prediction];
----
+      +----------------+
+      |  Input Data    |
+      +----------------+
+              |
+              v
+      +----------------+
+      | Feature Eng.   |
+      +----------------+
+              |
+              v
+ +-----------+-----------+
+ |   Train Base Models   |
+ +-----------+-----------+
+     |        |       |
+     v        v       v
++-----------+ +--------+ +--------+
+| Random    | | XGBoost | | CatBoost |
+| Forest    | +--------+ +--------+
++-----------+      |         |
+       \          |         /
+        \         |        /
+         \        |       /
+         +----------------+
+         | Ensemble Stacking |
+         +----------------+
+                 |
+                 v
+      +--------------------+
+      | Meta Learner (ElasticNet) |
+      +--------------------+
+                 |
+                 v
+        +----------------------+
+        |  Final Prediction    |
+        +----------------------+
+
+
 
 ## **Results**
 📊 **Performance Metrics:**  
@@ -105,21 +130,6 @@ graph TD;
 - `README.md` → This documentation.
 
 ---
-
-## **Repository Structure**
-```bash
-📦 sea-level-ensemble
- ┣ 📂 data
- ┃ ┗ 📜 demo_sea_level.csv  # Demo dataset
- ┣ 📂 models
- ┃ ┗ 📜 saved_model.pkl     # Trained model
- ┣ 📂 scripts
- ┃ ┣ 📜 train_model.py      # Training script
- ┃ ┗ 📜 model_utils.py      # Utility functions
- ┣ 📜 config.yaml           # Hyperparameters
- ┣ 📜 requirements.txt      # Dependencies
- ┗ 📜 README.md             # Documentation
-```
 
 
 📝 **Note:** This repository uses a **demo dataset** due to confidentiality agreements with **INCOIS**. The original dataset cannot be shared publicly. However, the methodology and model can be reproduced using similar data sources.
