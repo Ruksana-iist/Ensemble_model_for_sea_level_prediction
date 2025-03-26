@@ -16,13 +16,12 @@ This repository contains an advanced **ensemble machine learning model** for pre
 
 ## **Table of Contents**
 1. [Introduction](#introduction)
-2. [How to Run](#how-to-run)
-3. [Implementation Details](#implementation-details)
-4. [Model Architecture](#model-architecture)
-5. [Results](#results)
-6. [Files](#files)
-7. [Repository Structure](#repository-structure)
-8. [Future Enhancements](#future-enhancements)
+2. [Implementation Details](#implementation-details)
+3. [Model Architecture](#model-architecture)
+4. [Results](#results)
+5. [Files](#files)
+6. [Repository Structure](#repository-structure)
+7. [Future Enhancements](#future-enhancements)
 
 ---
 
@@ -38,24 +37,6 @@ Sea level rise is a critical challenge in coastal management and climate researc
 🔹 Predict sea level variations using a data-driven approach.  
 🔹 Implement **bagging, boosting, and stacking** ensemble methods.  
 🔹 Optimize hyperparameters for **high predictive accuracy**.  
-
----
-
-## **How to Run**
-### **Installation**
-```bash
-# Clone the repository
-git clone https://github.com/Ruksana-iist/Ensemble_model_for_sea_level_prediction.git
-cd sea-level-ensemble
-
-# Install dependencies
-pip install -r requirements.txt
-```
-
-### **Running the Model**
-```bash
-python train_model.py
-```
 
 ---
 
