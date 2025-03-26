@@ -66,6 +66,7 @@ The **stacked ensemble model** integrates predictions from **multiple base learn
 ---
 
 ## **Model Architecture**
+```mermaid
 graph TD;
     A[Input Data] -->|Feature Engineering| B[Train Base Models];
     B --> C[Random Forest];
@@ -76,7 +77,6 @@ graph TD;
     E --> F;
     F --> G[Meta Learner (ElasticNet)];
     G --> H[Final Prediction];
-
 ---
 
 ## **Results**
