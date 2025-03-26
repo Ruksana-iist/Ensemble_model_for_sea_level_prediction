@@ -77,8 +77,6 @@ graph TD;
     F --> G[Meta Learner (ElasticNet)];
     G --> H[Final Prediction];
 
-```
-
 ---
 
 ## **Results**
