@@ -13,5 +13,4 @@ dependencies:
   - jupyterlab
   - pip
   - pip:
-      - statistics==1.0.3.5
       - -r file:requirements.txt
