@@ -1,0 +1,17 @@
+name: oceanography-env
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.8
+  - numpy=1.24.2
+  - pandas=1.5.3
+  - matplotlib=3.7.1
+  - xarray=2023.2.0
+  - scipy=1.11.1
+  - scikit-learn=1.2.2
+  - jupyterlab
+  - pip
+  - pip:
+      - statistics==1.0.3.5
+      - -r file:requirements.txt
