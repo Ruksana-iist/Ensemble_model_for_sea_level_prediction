@@ -19,12 +19,12 @@ from sklearn.model_selection import TimeSeriesSplit
 from sklearn.metrics import r2_score, mean_squared_error
 
 # Assume dataset format
-columns = ["theato_m3", "so_m3", "V_eta", "V_xi", "M_eta", "M_xi", "dis24", "_lag_days", "sea_level", "Station"]
-data = pd.DataFrame(np.random.rand(1000, len(columns)), columns=columns)
+data =  pd.read_csv('dummy_data.csv')# exclusive for each tide gauge station
+
 
 # Split features and target
-X = data.drop(columns=["sea_level", "Station"])
-y = data["sea_level"].values.reshape(-1, 1)
+X = data.drop(columns=["Time","Sl_cor", "Station"])
+y = data["Sl_cor"].values.reshape(-1, 1)
 
 # Scale features using StandardScaler
 scaler_x = StandardScaler()
